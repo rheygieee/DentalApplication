@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button color="light" size="small" href="/home">Back to Home</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ion-card color="light">
+     <ion-title size="small">
+       How to Book an Appointment?
+       <p>1. Fill up the form.</p>
+       <p>2. Sit back and relax.</p>
+       <p>3. We will contact you!</p>
+
+       <ion-item>
+        <div id="contact">
+         Are you in a hurry?
+         <br>Text or Call Us! 
+         09123456789
+        </div>
+       </ion-item>
+
+     </ion-title>
+   </ion-card>
+   
+  <ion-card>
+    <ion-title>
+    Appointment Form
+    </ion-title>
+      <ion-list>
+
+        <ion-item>
+          <ion-label>New Patient</ion-label>
+          <ion-checkbox [(ngModel)]="form.np"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Returning Patient</ion-label>
+          <ion-checkbox [(ngModel)]="form.rp"></ion-checkbox>
+        </ion-item>
+      
+      </ion-list>
+ 
+    <ion-item>
+      <ion-label position="stacked">Full Name*</ion-label>
+      <ion-input [(ngModel)]="form.fn"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Phone Number*</ion-label>
+      <ion-input [(ngModel)]="form.pn"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Email Address*</ion-label>
+      <ion-input [(ngModel)]="form.ea"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Appointment Concern*</ion-label>
+      <ion-input [(ngModel)]="form.ac"></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+      <ion-title>Mode of Contact</ion-title>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-checkbox [(ngModel)]="form.email"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone Call</ion-label>
+        <ion-checkbox [(ngModel)]="form.pc"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Text Message</ion-label>
+        <ion-checkbox [(ngModel)]="form.tm"></ion-checkbox>
+      </ion-item>
+    <ion-button (click)="btnClicked()" expand="block" color="secondary"(click)="print()">Submit Now</ion-button>
+  
+  </ion-card>
+
+</ion-content>

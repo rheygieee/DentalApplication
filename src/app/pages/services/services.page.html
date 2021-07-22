@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Our Services</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <img src = "https://www.pngarts.com/files/5/Dental-Health-PNG-Image-Transparent-Background.png">
+    <ion-card *ngFor = "let service of menu">
+      <ion-img [src]="service.image"></ion-img>
+      <div id="service">
+      <ion-card-header>
+      <ion-card-title> {{service.name}} </ion-card-title>
+      </ion-card-header>
+      </div>
+    </ion-card>
+</ion-content>

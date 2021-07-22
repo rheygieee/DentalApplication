@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <img src = "https://www.pngarts.com/files/5/Dental-Health-PNG-Image-Transparent-Background.png">
+
+    <ion-card>
+      <ion-icon name="information-circle-outline"></ion-icon>
+      For Returning Patients
+      <ion-card>
+      <div id="card">
+        Use the Birth Date as your username and  default password will be Birth Date + first name initial + last name initial. Click "SIGN IN" button
+      </div>
+      </ion-card>
+    </ion-card>
+
+    <ion-card>
+      <ion-card>
+      <ion-item>
+        <ion-icon name="person-circle-outline"></ion-icon>
+    <ion-input type="email" [(ngModel)]="form.email_address" placeholder="Email Address"></ion-input>
+      </ion-item>
+      </ion-card>
+    
+      <ion-card>
+      <ion-item>
+        <ion-icon name="key-outline"></ion-icon>
+        <ion-input type="password" [(ngModel)]="form.password" placeholder="Password"></ion-input>
+      </ion-item>
+
+      </ion-card>
+      <div id="login">
+      <ion-button size="small" color="medium" href="/patientside" (click)="print()"> Sign in </ion-button>
+      </div>
+    </ion-card>
+
+</ion-content>
